@@ -1,5 +1,6 @@
 define({
     root : {
+        error: "Error",
         ghg_spatial_download: "GHG Spatial Download",
         download_layers: "Download layers",
         select_a_country: "Select a country",
