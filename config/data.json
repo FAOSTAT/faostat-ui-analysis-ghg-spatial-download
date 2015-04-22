@@ -1,0 +1,70 @@
+[
+  {
+    "name": "processed_activity_data",
+    "description": "processed_activity_data_description",
+    "product": [
+      {
+        "downloadID": "gfed4_burned_area_yearly",
+        "name": "gfed4_burned_area_yearly",
+        "description": "burned_dry_matter",
+        "layers":[
+          {
+            "name": "humid_tropical_forest"
+          },
+          {
+            "name": "other_forest"
+          }
+        ]
+      },
+      {
+        "downloadID": "organic_soils_area",
+        "name": "organic_soils_area",
+        "description": "organic_soils_area_description",
+        "layers":[
+          {
+            "name": "organic_soils"
+          },
+          {
+            "name": "cropland_organic_soils"
+          },
+          {
+            "name": "grassland_organic_soils"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "parameters_emission_factors",
+    "description": "parameters_emission_factors_description",
+    "product": [
+      {
+        "downloadID": "fuel_biomass_factors",
+        "name": "fuel_biomass_factors",
+        "description": "fuel_biomass_factors_description",
+        "layers":[
+          {
+            "name": "humid_tropical_forest"
+          },
+          {
+            "name": "other_forest"
+          }
+        ]
+      },
+      {
+        "downloadID": "emission_factors",
+        "name": "emission_factors",
+        "description": "emission_factors_description",
+        "layers":[
+          {
+            "name": "humid_tropical_forest"
+          },
+          {
+            "name": "other_forest"
+          }
+        ]
+      }
+    ]
+  }
+]
+
