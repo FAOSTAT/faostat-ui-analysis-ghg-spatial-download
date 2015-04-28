@@ -92,8 +92,9 @@ define([
 
                 /* Init JSTree. */
                 _this.tree.jstree({
-                    'plugins': ['unique', 'search', 'types', 'wholerow'],
+                    'plugins': ['unique', 'search', 'wholerow', 'checkbox' ],
                     'core': {
+                        'multiple' : false,
                         'data': payload,
                         'themes': {
                             'stripes': false,
@@ -105,7 +106,6 @@ define([
                         'close_opened_onclear': false
                     }
                 });
-
             },
             error: function (a) {
                 swal({title: translate.error, type: 'error', text: a.responseText});
