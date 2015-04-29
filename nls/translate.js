@@ -5,6 +5,7 @@ define({
         download_layers: "Download layers",
         select_a_country: "Select a country",
         product_list: "Product's list",
+        product_not_available_for_country: "The product is not available for the selected country",
 
         // data types
         processed_activity_data: "Processed Activity Data",

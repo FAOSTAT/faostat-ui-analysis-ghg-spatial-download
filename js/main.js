@@ -191,7 +191,30 @@ define([
                 code: code
             };
             var url = template(dynamic_data);
-            window.open(url);
+            if (this.urlExists(url)) {
+                window.open(url);
+                //this.downloadURI(url);
+            }
+            else {
+                swal({title: translate.error, type: 'error', text: translate.product_not_available_for_country});
+            }
+        }
+    }
+
+    GHG_SPATIAL_DOWNLOAD.prototype.urlExists = function(url) {
+        //TODO: implement check
+        return true;
+    }
+
+    GHG_SPATIAL_DOWNLOAD.prototype.downloadURI = function(uri, name)
+    {
+        var link = document.createElement("a");
+        link.download = name;
+        link.href = uri;
+        try {
+            link.click();
+        }catch (e){
+            console.log(e);
         }
     }
 

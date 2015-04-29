@@ -7,7 +7,7 @@
     <div class='row'>
         <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
             <h1>{{select_a_country}}</h1>
-            <div id='{{country_selector_id}}'></div>
+            <div class="fs-tree-holder fs-tree-holder-geospatial" id='{{country_selector_id}}'></div>
 
         </div>
         <div class='col-xs-9 col-sm-9 col-md-9 col-lg-9'>
@@ -40,8 +40,12 @@
 <script type='text/x-handlebars-template' id='product_structure'>
     <li class="list-group-item">
         <h2>{{title}}</h2>
-        <p class='ghg-text'>{{description}}</p>
-        <!--<button type='button' class='btn btn-primary pull-right' id="{{download_button_id}}">{{download_layers}}</button>-->
-        <button type='button' class='btn btn-primary' id="{{download_button_id}}">{{download_layers}}</button>
+        <h3>{{description}}</h3>
+        <div class="row">
+            <div class='col-xs-12'>
+                <button type='button' class='btn btn-primary pull-right' id="{{download_button_id}}">{{download_layers}}</button>
+            </div>
+        </div>
+        <!--<button type='button' class='btn btn-primary' id="{{download_button_id}}">{{download_layers}}</button>-->
     </li>
 </script>
