@@ -4,28 +4,22 @@
     "description": "processed_activity_data_description",
     "product": [
       {
-        "downloadID": "gfed4_burned_areas_dry_matter",
-        "title": "gfed4_burned_area_yearly",
-        "description": "burned_dry_matter",
+        "downloadID": "co2_emission_estimates",
+        "title": "co2_emission_estimates",
+        "description": "co2_emission_estimates",
         "layers":[
           {"title": "humid_tropical_forest"},
           {"title": "other_forest"}
         ]
       },
       {
-        "downloadID": "organic_soils_area",
-        "title": "organic_soils_area",
-        "description": "organic_soils_area_description",
+        "downloadID": "dm_gfed4_burning_peatlands",
+        "title": "dm_gfed4_burning_peatlands",
+        "description": "dm_gfed4_burning_peatlands",
         "layers":[
-          {
-            "title": "organic_soils"
-          },
-          {
-            "title": "cropland_organic_soils"
-          },
-          {
-            "title": "grassland_organic_soils"
-          }
+          {"title": "organic_soils"},
+          {"title": "cropland_organic_soils"},
+          {"title": "grassland_organic_soils"}
         ]
       }
     ]
@@ -35,9 +29,9 @@
     "description": "parameters_emission_factors_description",
     "product": [
       {
-        "downloadID": "fuel_biomass_factors",
-        "title": "fuel_biomass_factors",
-        "description": "fuel_biomass_factors_description",
+        "downloadID": "n2o_gfed4ba_emissions_burning_peatlands",
+        "title": "n2o_gfed4ba_emissions_burning_peatlands",
+        "description": "n2o_gfed4ba_emissions_burning_peatlands",
         "layers":[
           {
             "title": "humid_tropical_forest"
@@ -48,9 +42,9 @@
         ]
       },
       {
-        "downloadID": "emission_factors",
-        "title": "emission_factors",
-        "description": "emission_factors_description",
+        "downloadID": "gfed4_burnedarea_peatlands",
+        "title": "gfed4_burnedarea_peatlands",
+        "description": "gfed4_burnedarea_peatlands",
         "layers":[
           {
             "title": "humid_tropical_forest"

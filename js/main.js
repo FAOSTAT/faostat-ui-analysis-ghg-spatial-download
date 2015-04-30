@@ -17,7 +17,7 @@ define([
 
     function GHG_SPATIAL_DOWNLOAD() {
         this.CONFIG = {
-            placeholder_id: 'tiles_container',
+            placeholder: 'tiles_container',
             datasource: 'faostatdb',
             lang_faostat: 'E',
 
@@ -53,7 +53,7 @@ define([
             accordion_datatype_id: this.CONFIG.accordion_datatype_id
         };
         var html = template(dynamic_data);
-        $('#' + this.CONFIG.placeholder_id).html(html);
+        $('#' + this.CONFIG.placeholder).html(html);
 
         // render the tree with countries
         this.renderTree(this.CONFIG.country_selector_id);
@@ -132,7 +132,7 @@ define([
 
         var template = Handlebars.compile(source);
         var dynamic_data = {
-            title: translate[data.title],
+            title: this.getLabel(data.title),
             accordion_datatype_id: accordion_datatype_id,
             datatype_heading_id: datatype_heading_id,
             datatype_products_id: datatype_products_id,
@@ -152,8 +152,8 @@ define([
 
         var template = Handlebars.compile(source);
         var dynamic_data = {
-            title: translate[data.title],
-            description: translate[data.description],
+            title: this.getLabel(data.title),
+            description: this.getLabel(data.description),
             download_layers: translate.download_layers,
             download_button_id: data.downloadID
         };
@@ -216,6 +216,10 @@ define([
         }catch (e){
             console.log(e);
         }
+    }
+
+    GHG_SPATIAL_DOWNLOAD.prototype.getLabel = function(label) {
+        return translate[label]? translate[label]: label;
     }
 
     return GHG_SPATIAL_DOWNLOAD;
