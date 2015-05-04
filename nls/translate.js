@@ -4,7 +4,7 @@ define({
         ghg_spatial_download: "GHG Spatial Download",
         download_layers: "Download layers",
         select_a_country: "Select a country",
-        product_list: "Product's list",
+        product_list: "Products list",
         product_not_available_for_country: "The product is not available for the selected country",
 
         // data types
