@@ -1,18 +1,20 @@
 <script type='text/x-handlebars-template' id='main_structure'>
-    <div class='row'>
-        <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-            <h1>{{title}}</h1>
+    <div class='container-fluid'>
+        <div class='row'>
+            <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <h1>{{title}}</h1>
+            </div>
         </div>
-    </div>
-    <div class='row'>
-        <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
-            <h1>{{select_a_country}}</h1>
-            <div class="fs-tree-holder fs-tree-holder-geospatial" id='{{country_selector_id}}'></div>
+        <div class='row'>
+            <div class='col-xs-3 col-sm-3 col-md-3 col-lg-3'>
+                <h1>{{select_a_country}}</h1>
+                <div class="fs-tree-holder fs-tree-holder-geospatial" id='{{country_selector_id}}'></div>
 
-        </div>
-        <div class='col-xs-9 col-sm-9 col-md-9 col-lg-9'>
-            <h1>{{product_list}}</h1>
-            <div class="panel-group" id="{{accordion_datatype_id}}" role="tablist" aria-multiselectable="true"></div>
+            </div>
+            <div class='col-xs-9 col-sm-9 col-md-9 col-lg-9'>
+                <h1>{{product_list}}</h1>
+                <div class="panel-group" id="{{accordion_datatype_id}}" role="tablist" aria-multiselectable="true"></div>
+            </div>
         </div>
     </div>
 </script>
