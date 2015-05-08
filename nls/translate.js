@@ -1,5 +1,6 @@
 define({
     root : {
+        please_select: "Please Select...",
         error: "Error",
         ghg_spatial_download: "GHG Spatial Download",
         download_layers: "Download layers",
