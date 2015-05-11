@@ -4,9 +4,9 @@
     "description": "processed_activity_data_description",
     "product": [
       {
-        "title": "gfed4_burned_area_yearly",
-        "description": "gfed4_burned_area_yearly_description",
-        "downloadID": "gfed4_burned_area_yearly",
+        "title": "gfed4_burned_areas_yearly",
+        "description": "gfed4_burned_areas_yearly_description",
+        "downloadID": "GFED4 burned areas",
         "layers":[
           {"title": "humid_tropical_forest"},
           {"title": "other_forest"},
@@ -15,7 +15,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
@@ -30,7 +30,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
@@ -61,7 +61,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
@@ -76,7 +76,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
@@ -145,7 +145,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
@@ -160,7 +160,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
@@ -175,7 +175,7 @@
           {"title": "woody_savanna"},
           {"title": "savanna"},
           {"title": "grassland"},
-          {"title": "peatland"}
+          {"title": "peatlands"}
         ]
       },
       {
