@@ -32,6 +32,7 @@ define([
             download_projection: "4326",
             download_coding_system: "faostat",
             url_ghg_download: 'http://fenix.fao.org/storage/prod/ghg/{{projection}}/{{product_id}}/{{coding_system}}/{{code}}/{{product_id}}.zip',
+            url_ghg_download_global: 'http://fenix.fao.org/storage/prod/ghg/{{projection}}/{{product_id}}/{{product_id}}.zip',
 
             country_selector_id: 'country_selector_id',
             country_selector_dd_id: 'country_selector_dd_id',
@@ -215,7 +216,7 @@ define([
             title: this.getLabel(data.title),
             description: this.getLabel(data.description),
             download_layers: translate.download_layers,
-            download_button_id: data.downloadID
+            download_button_id: data.download.id
         };
 
         var html = template(dynamic_data);
@@ -223,24 +224,30 @@ define([
 
         // bind download
         var _this = this;
-        $("#" + dynamic_data.download_button_id).click({product_id: data.downloadID}, function(event) {
+        $("#" + dynamic_data.download_button_id).click({product_id: data.download.id, isGlobal:data.download.global}, function(event) {
             _this.downloadProduct(
-                _this.CONFIG.url_ghg_download,
                 _this.CONFIG.download_projection,
                 event.data.product_id,
                 _this.CONFIG.download_coding_system,
-                _this.getCountryCode()
+                _this.getCountryCode(event.data.isGlobal),
+                event.data.isGlobal
             )
         });
     }
 
-    GHG_SPATIAL_DOWNLOAD.prototype.getCountryCode = function() {
-        var areaCode = $("#" + this.CONFIG.country_selector_dd_id).chosen().val();
-        if (areaCode != 'null') {
-            return areaCode;
-        }
+    GHG_SPATIAL_DOWNLOAD.prototype.getCountryCode = function(isGlobal) {
+        // dirty check
+        if (isGlobal)
+            return null;
         else {
-            swal({title: translate.error, type: 'error', text: translate.select_a_country})}
+            var areaCode = $("#" + this.CONFIG.country_selector_dd_id).chosen().val();
+            if (areaCode != 'null') {
+                return areaCode;
+            }
+            else {
+                swal({title: translate.error, type: 'error', text: translate.select_a_country})
+            }
+        }
 
         //if (this.tree.jstree().get_selected(true) <= 0)
         //    swal({title: translate.error, type: 'error', text: translate.select_a_country});
@@ -248,8 +255,9 @@ define([
         //    return this.tree.jstree().get_selected(true)[0].li_attr.code;
     }
 
-    GHG_SPATIAL_DOWNLOAD.prototype.downloadProduct = function(url ,projection, product_id, coding_system, code) {
-        //url_ghg_download: 'http://fenix.fao.org/storage/prod/ghg/{{projection}}/{{product_id}}/{{coding_system}}/{{code}}/{{product_id}}.zip',
+    GHG_SPATIAL_DOWNLOAD.prototype.downloadProduct = function(projection, product_id, coding_system, code, isGlobal) {
+        var url = (isGlobal)? this.CONFIG.url_ghg_download_global: this.CONFIG.url_ghg_download;
+
         if(typeof code !== 'undefined') {
             var template = Handlebars.compile(url);
             var dynamic_data = {
@@ -262,7 +270,6 @@ define([
             var url = template(dynamic_data);
             console.log(url);
             if (this.urlExists(url)) {
-                console.log(url);
                 window.open(url);
                 //this.downloadURI(url);
             }
