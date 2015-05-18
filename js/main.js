@@ -1,5 +1,5 @@
 define([
-        //'jquery',
+        'jquery',
         'handlebars',
         'text!faostat-ui-analysis-ghg-spatial-download/html/templates.html',
         'i18n!faostat-ui-analysis-ghg-spatial-download/nls/translate',
@@ -11,7 +11,7 @@ define([
         'chosen',
         'sweetAlert'
         ], function (
-    //$,
+    $,
     Handlebars,
     templates,
     translate,
