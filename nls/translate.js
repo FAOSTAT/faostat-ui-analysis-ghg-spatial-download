@@ -70,6 +70,6 @@ define({
         gridded_livestock_sheep: "Gridded Livestock Sheep",
         global_land_cover_glc2000:"Global Land Cover (GLC2000)"
     },
-    fr : true,
-    es : true
+    'F' : true,
+    'S' : true
 });
