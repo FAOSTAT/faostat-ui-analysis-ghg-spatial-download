@@ -7,5 +7,6 @@ define({
 
     // data types
     processed_activity_data: "Datos de actividad procesados",
+
     parameters_emission_factors: "Parámetros y factores de emisión",
 });

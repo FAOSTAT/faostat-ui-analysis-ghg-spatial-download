@@ -49,6 +49,7 @@ define([
         this.CONFIG.data = $.parseJSON(data);
         this.CONFIG = $.extend(true, {}, this.CONFIG, config);
         this.render();
+        $('.chosen-container.chosen-container-single').css('width', '100%');
     };
 
     GHG_SPATIAL_DOWNLOAD.prototype.render = function() {
@@ -100,7 +101,7 @@ define([
                 /* Cast the response to JSON, if needed. */
                 var response = (typeof response == 'string')? $.parseJSON(response): response;
 
-                var html = '<select id="'+ _this.CONFIG.country_selector_dd_id +'">';
+                var html = '<select style="width:100%;" id="'+ _this.CONFIG.country_selector_dd_id +'">';
                 html += '<option value="null">' + translate.please_select + '</option>';
                 for(var i=0; i < response.length; i++) {
                     html += '<option value="' + response[i][0] + '">' + response[i][1] + '</option>';
@@ -299,6 +300,10 @@ define([
     GHG_SPATIAL_DOWNLOAD.prototype.getLabel = function(label) {
         return translate[label]? translate[label]: label;
     }
+
+    GHG_SPATIAL_DOWNLOAD.prototype.refresh = function() {
+        //$('.chosen-container.chosen-container-single').css('width', '100%');
+    };
 
     return GHG_SPATIAL_DOWNLOAD;
 });
