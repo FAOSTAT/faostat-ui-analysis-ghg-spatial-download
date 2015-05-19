@@ -81,8 +81,9 @@ define([
         var url = this.CONFIG.url_wds_table_json;
         var template = Handlebars.compile(this.CONFIG.query_countries);
         var dynamic_data = {
-            lang: this.CONFIG.lang_faostat
+            lang: this.CONFIG.lang
         };
+        console.log(template);
         var data = {};
         var sql = {};
 
@@ -122,7 +123,7 @@ define([
         /* REST URL */
         var _this = this;
         this.tree = $("#" + id);
-        var url = this.CONFIG.url_rest + '/' + this.CONFIG.datasource + '/QC/1/1/' + this.CONFIG.lang_faostat;
+        var url = this.CONFIG.url_rest + '/' + this.CONFIG.datasource + '/QC/1/1/' + this.CONFIG.lang;
         $.ajax({
             type: 'GET',
             url: url,
