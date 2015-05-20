@@ -1,11 +1,11 @@
 define({
     root : {
-        please_select: "Please Select...",
+        please_select: "Select...",
         error: "Error",
         ghg_spatial_download: "GHG Spatial Download",
         download_layers: "Download layers",
-        select_a_country: "Select a country",
-        product_list: "Products list",
+        select_a_country: "Country",
+        product_list: "Select a data type to choose the product to download",
         product_not_available_for_country: "The product is not available for the selected country",
 
         // data types

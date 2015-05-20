@@ -2,8 +2,7 @@ define({
 
     ghg_spatial_download: "Descargas espaciales de GEI",
     download_layers: "Descargar capas",
-    select_a_country: "Seleccionar un país",
-    product_list: "Lista de productos",
+    select_a_country: 'País',
 
     // data types
     processed_activity_data: "Datos de actividad procesados",

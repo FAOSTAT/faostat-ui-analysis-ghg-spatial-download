@@ -1,7 +1,7 @@
 define([
         'jquery',
         'handlebars',
-        'text!faostat-ui-analysis-ghg-spatial-download/html/templates.html',
+        'text!faostat-ui-analysis-ghg-spatial-download/html/templates.hbs',
         'i18n!faostat-ui-analysis-ghg-spatial-download/nls/translate',
 
         // TODO Change it
@@ -58,7 +58,7 @@ define([
         var source = $(templates).filter('#main_structure').html();
         var template = Handlebars.compile(source);
         var dynamic_data = {
-            title: translate.ghg_spatial_download,
+            //title: translate.ghg_spatial_download,
             select_a_country: translate.select_a_country,
             product_list: translate.product_list,
             country_selector_id: this.CONFIG.country_selector_id,
@@ -83,7 +83,6 @@ define([
         var dynamic_data = {
             lang: this.CONFIG.lang
         };
-        console.log(template);
         var data = {};
         var sql = {};
 
@@ -303,7 +302,7 @@ define([
     }
 
     GHG_SPATIAL_DOWNLOAD.prototype.refresh = function() {
-        //$('.chosen-container.chosen-container-single').css('width', '100%');
+        $('.chosen-container.chosen-container-single').css('width', '100%');
     };
 
     return GHG_SPATIAL_DOWNLOAD;

@@ -2,27 +2,23 @@
     <div class='container-fluid'>
         <div class='row'>
             <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
-                <h1 class="fs-section-title">{{title}}</h1>
+                <h1>{{title}}</h1>
             </div>
         </div>
-        <div class='row' style="padding-top:25px;">
+        <div class='row'>
             <div class='col-xs-4'>
-                <label>{{select_a_country}}</label>
-                <!--<h1 class="fs-frame-title">{{select_a_country}}</h1>-->
-                <!--<div class="fs-tree-holder fs-tree-holder-geospatial" id='{{country_selector_id}}'></div>-->
+                <h4>{{select_a_country}}</h4>
                 <div id='{{country_selector_id}}'></div>
             </div>
         </div>
-        <div class='row' style="padding:25px 0 10px 0;">
+        <div class='row'>
             <div class='col-xs-12'>
-                <!--<h1 class="fs-frame-title">{{product_list}}</h1>-->
-                <label>{{product_list}}</label>
+                <h4>{{product_list}}</h4>
                 <div class="panel-group fs-geospatial-download-product-list" id="{{accordion_datatype_id}}" role="tablist" aria-multiselectable="true"></div>
             </div>
         </div>
     </div>
 </script>
-
 
 <script type='text/x-handlebars-template' id='accordion_datatype'>
     <div class="panel panel-default">
@@ -41,7 +37,6 @@
         </div>
     </div>
 </script>
-
 
 <script type='text/x-handlebars-template' id='product_structure'>
     <li class="list-group-item">
